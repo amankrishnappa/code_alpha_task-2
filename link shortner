@@ -1,0 +1,56 @@
+//HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Link Shortener</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Link Shortener</h1>
+  <input type="text" id="original link" placeholder="Enter the original link">
+  <button onclick="shortenLink()">Shorten</button>
+  <div id="shortened link"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+//css
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+input[type="text"] {
+  width: 400px;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#shortenedLink {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+//js
+function shortenLink() {
+  var originalLink = document.getElementById("original link").value;
+
+  // Send the original link to a server for shortening
+  // You can replace this placeholder logic with your actual implementation
+
+  var shortened link = "https://short.ly/abc123"; // Replace with the shortened link received from the server
+
+  document.getElementById("shortened link").innerHTML = "Shortened Link: <a href='" + shortened link + "'>" + shortened link + "</a>";
+}
